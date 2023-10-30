@@ -160,6 +160,6 @@ Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://tw
 
 Second part of Airbnb: Joann Vuong
 
-Emmanuel Odhiambo - [Github](https://github.com/thesimplezero)[Twitter/X](https:/twitter.com/thesimplezero)
+Emmanuel Odhiambo - [Github](https://github.com/thesimplezero) / [Twitter/X](https:/twitter.com/thesimplezero)
 
-Ronald Nene - [Github](https://https://github.com/Drhydeandmrjekyll) [Twitter/X](https:/twitter.com/Jekyll10hyde)
+Ronald Nene - [Github](https://https://github.com/Drhydeandmrjekyll) / [Twitter/X](https:/twitter.com/Jekyll10hyde)
