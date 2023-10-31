@@ -215,7 +215,6 @@ def places_search():
                     if place not in list_places:
                         list_places.append(place)
 
-
     # Filter places based on amenities criteria
     if amenities:
         if not list_places:
