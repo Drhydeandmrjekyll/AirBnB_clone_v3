@@ -10,15 +10,15 @@ from models.amenity import Amenity
 @app_views.route('/amenities', methods=['GET'], strict_slashes=False)
 def get_amenities():
     """Retrieves the list of all Amenity objects"""
-    amenities = storage.all(Amenity)
-    return jsonify([obj.to_dict() for obj in amenities.values()])
+    amenities = storage.all(Amenity).values()
+    return jsonify([amenity.to_dict() for amenity in amenities])
 
 
 @app_views.route('/amenities/<amenity_id>', methods=['GET'],
                  strict_slashes=False)
 def get_amenity(amenity_id):
     """Retrieves an amenity object by ID"""
-    amenity = storage.get("Amenity", amenity_id)
+    amenity = storage.get('Amenity', amenity_id)
     if amenity is None:
         abort(404)
     return jsonify(amenity.to_dict())
@@ -28,7 +28,7 @@ def get_amenity(amenity_id):
                  strict_slashes=False)
 def delete_amenity(amenity_id):
     """Deletes an amenity object by ID"""
-    amenity = storage.get("Amenity", amenity_id)
+    amenity = storage.get('Amenity', amenity_id)
     if amenity is None:
         abort(404)
     amenity.delete()
@@ -54,14 +54,13 @@ def create_amenity():
                  strict_slashes=False)
 def update_amenity(amenity_id):
     """Updates an Amenity object by ID"""
-    amenity = storage.get("Amenity", amenity_id)
+    amenity = storage.get('Amenity', amenity_id)
     if amenity is None:
         abort(404)
     data = request.get_json()
     if not data:
         abort(400, 'Not a JSON')
 
-    # Update the State object's attributes based on the JSON data
     for key, value in data.items():
         if key not in ['id', 'created_at', 'updated_at']:
             setattr(amenity, key, value)
